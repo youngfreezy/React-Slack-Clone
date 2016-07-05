@@ -7,9 +7,9 @@ class Channel extends React.Component {
       }
     }
 
-    class ChannelList extends React.Component {
-        render() {
-            return (<ul> {this.props.channels.map( channel => {
+class ChannelList extends React.Component {
+     render() {
+         return (<ul> {this.props.channels.map( channel => {
             return ( <Channel name = {channel.name}/ > )
           })
         } 
@@ -17,7 +17,7 @@ class Channel extends React.Component {
     }
   }
 
-  class ChannelForm extends React.Component {
+class ChannelForm extends React.Component {
     constructor(props) {
       super(props);
       this.state = {};
@@ -45,7 +45,7 @@ class Channel extends React.Component {
     }
   }
 
-  class ChannelSection extends React.Component {
+class ChannelSection extends React.Component {
     //need to store array of channels here since it's the parent most
     constructor(props) {
       super(props);

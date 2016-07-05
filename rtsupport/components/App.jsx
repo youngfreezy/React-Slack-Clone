@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ChannelSection from './channels/ChannelSection.jsx';
 import UserSection from './users/UserSection.jsx';
+import MessageSection from './messages/MessageSection.jsx';
 
 class App extends Component {
 	//do this to instantiate state object:
@@ -10,7 +11,8 @@ class App extends Component {
 			channels: [],
 			activeChannel: {},
 			users: [],
-			activeUser: {}
+			activeUser: {},
+			messages: []
 		};
 	}
 
@@ -26,15 +28,19 @@ class App extends Component {
 		//TODO: get latest messages for that channel
 	}
 
-	addUser(name){
+	setUserName (name) {
 		let {users} = this.state;
 		users.push({id: users.length, name})
 		this.setState({users})
 	}
 
-	setUser (activeUser) {
-		this.setState({activeUser})
-	}
+	 addMessage(body){
+    let {messages, users} = this.state;
+    let createdAt = new Date;
+    let author = users.length > 0 ? users[0].name : 'anonymous';
+    messages.push({id: messages.length, body, createdAt, author})
+    this.setState({messages})
+  }
 	render (){
 		return (
 			<div className="app">
@@ -46,10 +52,13 @@ class App extends Component {
 					/>
 					<UserSection
 						{...this.state}
-						addUser = {this.addUser.bind(this)}
-						setUser = {this.setUser.bind(this)}
+						setUserName = {this.setUserName.bind(this)}
 					/>
 				</div>
+				<MessageSection
+        		{...this.state}
+        		addMessage={this.addMessage.bind(this)}
+      		/>
 			</div>
 		
 		)

@@ -8,12 +8,12 @@ class Channel extends Component {
   render() {
     const { channel } = this.props;
     return (
-      <li>
-				<a onClick={this.onClick.bind(this)}>
-					{channel.name}
-				</a>
-			</li>
-    )
+				  <li>
+								<a onClick={this.onClick.bind(this)}>
+									{channel.name}
+								</a>
+					</li>
+					)
   }
 }
 

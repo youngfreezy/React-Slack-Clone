@@ -13,7 +13,7 @@ class UserSection extends Component {
 					<UserList {...this.props}/>
 					<UserForm {...this.props}/>
 				</div>
-			</div>
+				</div>
 		)
 	}
 }

@@ -10,9 +10,9 @@ class UserList extends Component {
 						user = {user}
 						key={user.id}
 						{...this.props}
-					/>
+									/>
 				})}
-			</ul>
+			</ul>	
 		)
 	}
 }

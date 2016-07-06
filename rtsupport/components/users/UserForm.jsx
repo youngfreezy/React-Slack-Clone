@@ -11,8 +11,8 @@ class UserForm extends Component {
   render() {
     return (
       <form onSubmit={this.onSubmit.bind(this)}>
-				<div className="form-group">
-					<input
+        <div className="form-group">
+          <input
 						className="form-control"
 						placeholder="Set Your Name"
 						type='text'

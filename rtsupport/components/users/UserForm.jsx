@@ -13,13 +13,13 @@ class UserForm extends Component {
       <form onSubmit={this.onSubmit.bind(this)}>
         <div className="form-group">
           <input
-						className="form-control"
-						placeholder="Set Your Name"
-						type='text'
-						ref='userName'
-					/>
-				</div>
-			</form>
+            className="form-control"
+            placeholder="Set Your Name"
+            type='text'
+            ref='userName'
+          />
+        </div>
+      </form>
     )
   }
 }

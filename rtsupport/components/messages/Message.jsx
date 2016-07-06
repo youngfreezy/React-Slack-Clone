@@ -10,7 +10,7 @@ class Message extends Component {
 			<li className='message'>
 				<div className='author'>
 					<strong>{message.author}</strong> 
-          <i className='timestamp'>{createdAt}</i>
+					<i className='timestamp'>{createdAt}</i>
 				</div>
 				<div className='body'>{message.body}</div>
 			</li>

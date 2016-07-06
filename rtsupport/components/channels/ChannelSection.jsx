@@ -14,7 +14,6 @@ class ChannelSection extends Component {
 					<ChannelForm {...this.props}/>
 				</div>
 			</div>
-			
 		)
 	}
 }

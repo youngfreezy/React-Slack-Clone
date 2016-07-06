@@ -10,7 +10,8 @@ class MessageList extends Component{
             <Message key={message.id} message={message} />
           )
         })
-      }</ul>
+      }
+      </ul>
     )
   }
 }

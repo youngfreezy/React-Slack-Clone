@@ -6,15 +6,15 @@ class Channel extends Component {
     setChannel(channel);
   }
   render() {
-    const { channel, activeChannel} = this.props;
+    const { channel, activeChannel } = this.props;
     const active = channel === activeChannel ? 'active' : '';
     return (
-				  <li className={active}>
-								<a onClick={this.onClick.bind(this)}>
-									{channel.name}
-								</a>
-					</li>
-					)
+      <li className={active}>
+        <a onClick={this.onClick.bind(this)}>
+          {channel.name}
+        </a>
+      </li>
+    )
   }
 }
 
